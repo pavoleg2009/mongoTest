@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const PostSchema = require('./post');
+const BlogPost = require('./blogPost');
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
@@ -13,7 +14,11 @@ const UserSchema = new Schema({
   },
 //  postCount: Number,
   posts: [PostSchema],
-  likes: Number
+  likes: Number,
+  blogPosts: [{
+    type: Schema.Types.ObjectId,
+    ref: 'blogpost'
+  }]
 });
 
 UserSchema.virtual('postCount').get(function() {
