@@ -38,7 +38,6 @@ describe('Reading users from database', () => {
       .skip(1)
       .limit(2)
       .then((users) => {
-        console.log(users);
         assert(users[0].name === 'Joe');
         assert(users[1].name === 'Maria');
         assert(users.length === 2);
