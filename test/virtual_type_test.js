@@ -14,6 +14,5 @@ describe('Virtul types', () => {
         assert(true);
         done();
       })
-
   });
 });

@@ -16,7 +16,7 @@ describe('Middleware', () => {
       .then(() => done());
   });
 
-  it('users clean uo dangling blogposts on remove', (done) => {
+  it('users clean up dangling blogposts on remove', (done) => {
     joe.remove()
       .then(() => BlogPost.count()) // returns count of collection items
       .then((count) => {
